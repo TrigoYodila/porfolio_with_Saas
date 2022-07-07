@@ -2,10 +2,11 @@
 
 @import "config";
 @import "home";
+@import 'menu';
 
 body {
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100vh;
   font-family: "Poppins", sans-serif;
   line-height: 1;
@@ -18,7 +19,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
@@ -40,6 +41,7 @@ main {
 
     a {
       padding: 0.4rem;
+      @include transition-ease;
 
       &:hover {
         color: $secondary-color;
